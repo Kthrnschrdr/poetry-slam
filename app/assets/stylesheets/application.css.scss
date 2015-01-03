@@ -34,14 +34,11 @@ $red: #E32F21;
 
 
 //flash STRUCTURE and SKIN
-#error_explanation {
+#error_explanation, #notice {
   font: 100% $font;
   text-transform: lowercase;
   color: $red;
-}
-#notice {
   float: left;
-  color: $red;
 }
 
 
@@ -66,9 +63,12 @@ a {
   margin-top: 45px;
 }
 .photo {
- border-radius: 100%; 
- margin: 0 auto;
- border: 5px solid $blackish;
+  border-radius: 100%; 
+  margin: 0 auto;
+  border: 5px solid $blackish;
+}
+.field {
+  margin: 10px auto;
 }
 //content SKIN
 #content h1 {
@@ -99,7 +99,7 @@ a:hover {
 }
 
 
-//link(as in button) specific STRUCTURE
+//link (as in button) specific STRUCTURE
 .top_link {
   margin-top: 6px;
   font-size: 25%;
@@ -115,7 +115,7 @@ a:hover {
   margin-top: 30px;
   float: left;
 }
-//link(as in button) specific SKIN
+//link (as in button) specific SKIN
 .internal_link {
   font: 75% $special_font;
   text-decoration: none;
@@ -124,6 +124,13 @@ a:hover {
 }
 
 
+//all "index" page specific STRUCTURE
+.each_poet {
+  display: block;
+  float: left;
+  width: 250px;
+  padding: 10px;
+}
 //all "index" page specific SKIN
 .poets {
   font-family: $special_font;
@@ -133,44 +140,42 @@ a:hover {
 }
 
 
-//all "show" page specific STRUCTURE and SKIN
+//all "show" page specific STRUCTURE
 .poet, .slam, .round {
-  text-align: center;
   margin: 0 auto;
   padding: 10px;
-  background-color: $aqua;
   border-radius: 10px;
   height: 90%;
   margin-top: 20px;
+}
+//all "show" page specific SKIN
+.poet, .round {
+  background-color: $aqua;
 }
 .slam {
   background-color: $seafoam;
 }
 
 
-//poet page specific STRUCTURE
-.each_poet {
-  display: block;
-  float: left;
-  width: 250px;
-  padding: 10px;
-}
+//"advance_poet" view specific STRUCTURE and SKIN 
 .advance_poets {
   background-color: $aqua;
   border-radius: 100%;
 }
 
 
-.field {
-  margin: 10px auto;
+//form specific STRUCTURE
+.form_field {
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
-
 .actions {
   margin: 10px auto;
   width: 81%;
   text-align: center;
 }
-
+//form specific SKIN
 .form_field {
   text-align: center;
   background-color: $aqua;
@@ -178,39 +183,41 @@ a:hover {
   text-transform: lowercase;
   font-size: x-large;
   color: $blackish;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 10px;
 }
 
+
+//input specific STRUCTURE
 input[type=submit] {
-  text-align: center;
-  background-color: $red;
-  color: $blackish;
   width: 200px;
   margin: 10px auto;
   border-radius: 10px;
-  font-family: $font;
-  font-size: large;
-  text-transform: uppercase;
   border: 5px solid $blackish;
   cursor: pointer;
 }
-
 input[type=text] {
   border-radius: 10px;
   height: 25px;
-  font: $special_font;
-  color: $blackish;
-  font-size: large;
 }
-
 input[type=checkbox] {
   -ms-transform: scale(2); /* IE */
   -moz-transform: scale(2); /* FF */
   -webkit-transform: scale(2); /* Safari and Chrome */
   -o-transform: scale(2); /* Opera */
   padding: 10px;
+}
+//input specific SKIN
+input[type=submit] {
+  text-align: center;
+  background-color: $red;
+  color: $blackish;
+  font-family: $font;
+  font-size: large;
+  text-transform: uppercase;
+}
+input[type=text] {
+  font: $special_font;
+  color: $blackish;
+  font-size: large;
 }
 
 
